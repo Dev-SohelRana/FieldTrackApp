@@ -1,0 +1,24 @@
+class AppIcons {
+  /*assets route*/
+  static const String iconsRoute = 'assets/icons';
+
+  ///>>>>>>>>>>>>>>new icon is here >>>>>>>>>>>>>>>>
+
+  // ///>>>>>>>>>>>>>>Bottom Navigation Icons >>>>>>>>>>>>>>>>
+  static const String nameIcon = '$iconsRoute/nameIcon.svg';
+  static const String logo = '$iconsRoute/logo.svg';
+  static const String emailIcon = '$iconsRoute/emailIcon.svg';
+  static const String passwordIcon = '$iconsRoute/passwordIcon.svg';
+  static const String taskSelectedIcon = '$iconsRoute/taskSelectedIcon.svg';
+  static const String taskUnselectedIcon = '$iconsRoute/taskUnselectedIcon.svg';
+  static const String locationUnselectedIcon =
+      '$iconsRoute/locationUnselectedIcon.svg';
+  static const String locationSelectedIcon =
+      '$iconsRoute/locationSelectedIcon.svg';
+  static const String syncSelectedIcon = '$iconsRoute/syncSelectedIcon.svg';
+  static const String syncUnselectedIcon = '$iconsRoute/syncUnselectedIcon.svg';
+  static const String profileSelectedIcon =
+      '$iconsRoute/profileSelectedIcon.svg';
+
+  static const String arrowBackIcon = '$iconsRoute/arrowBackIcon.svg';
+}
