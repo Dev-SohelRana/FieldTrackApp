@@ -125,10 +125,21 @@ class TextFontStyle {
     fontSize: 13.sp,
     fontWeight: FontWeight.w500,
   );
+  static final headlinePoppins40013 = GoogleFonts.poppins(
+    color: AppColors.titleColor,
+    fontSize: 13.sp,
+    fontWeight: FontWeight.w400,
+  );
 
   static final headlinePoppins60012 = GoogleFonts.poppins(
     color: AppColors.titleColor,
     fontSize: 12.sp,
+    fontWeight: FontWeight.w600,
+  );
+
+  static final headlinePoppins60015 = GoogleFonts.poppins(
+    color: AppColors.titleColor,
+    fontSize: 15.sp,
     fontWeight: FontWeight.w600,
   );
 
@@ -143,10 +154,27 @@ class TextFontStyle {
     fontSize: 14.sp,
     fontWeight: FontWeight.w700,
   );
+  static final headlinePoppins60013 = GoogleFonts.poppins(
+    color: AppColors.primaryColor,
+    fontSize: 13.sp,
+    fontWeight: FontWeight.w600,
+  );
 
   static final headlinePoppins70021 = GoogleFonts.poppins(
     color: AppColors.c000000,
     fontSize: 21.sp,
+    fontWeight: FontWeight.w700,
+  );
+
+  static final headlinePoppins70013 = GoogleFonts.poppins(
+    color: AppColors.primaryColor,
+    fontSize: 13.sp,
+    fontWeight: FontWeight.w700,
+  );
+
+  static final headlinePoppins70011 = GoogleFonts.poppins(
+    color: AppColors.c000000,
+    fontSize: 11.sp,
     fontWeight: FontWeight.w700,
   );
 
