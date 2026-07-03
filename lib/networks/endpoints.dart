@@ -21,6 +21,7 @@ final class Endpoints {
   //backend_url
   static String register() => "/api/v1/auth/register";
   static String logIn() => "/api/v1/auth/login";
+  static String getTodos() => "/api/v1/todos";
 
   static String logOut() => "/api/v1/auth/logout";
 

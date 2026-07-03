@@ -1,4 +1,5 @@
 import 'package:field_track_app/assets_helper/app_colors.dart';
+import 'package:field_track_app/constants/custom_app_list.dart';
 import 'package:field_track_app/constants/text_font_style.dart';
 import 'package:field_track_app/helpers/ui_helpers.dart';
 import 'package:flutter/material.dart';
@@ -10,6 +11,8 @@ class TaskScreen extends StatefulWidget {
   @override
   State<TaskScreen> createState() => _TaskScreenState();
 }
+
+int selectedIndex = 0;
 
 class _TaskScreenState extends State<TaskScreen> {
   @override
@@ -81,60 +84,46 @@ class _TaskScreenState extends State<TaskScreen> {
             ),
             UIHelper.verticalSpace(11.h),
             Row(
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    color: AppColors.cFFFFFF,
-                    borderRadius: BorderRadius.circular(16.r),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: 16.w,
-                      vertical: 8.h,
-                    ),
-                    child: Text(
-                      'All',
-                      style: TextFontStyle.headlinePoppins60013,
-                    ),
-                  ),
-                ),
-                UIHelper.horizontalSpace(8.h),
-                Container(
-                  decoration: BoxDecoration(
-                    color: AppColors.cFFFFFF,
-                    borderRadius: BorderRadius.circular(16.r),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: 16.w,
-                      vertical: 8.h,
-                    ),
-                    child: Text(
-                      'Pending',
-                      style: TextFontStyle.headlinePoppins60013,
-                    ),
-                  ),
-                ),
-                UIHelper.horizontalSpace(8.h),
-                Container(
-                  decoration: BoxDecoration(
-                    color: AppColors.primaryColor,
-                    borderRadius: BorderRadius.circular(16.r),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: 16.w,
-                      vertical: 8.h,
-                    ),
-                    child: Text(
-                      'Completed',
-                      style: TextFontStyle.headlinePoppins60013.copyWith(
-                        color: AppColors.cFFFFFF,
+              children: List.generate(taskFilters.length, (index) {
+                final bool isSelected = selectedIndex == index;
+
+                return Padding(
+                  padding: EdgeInsets.only(right: 8.w),
+                  child: GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        selectedIndex = index;
+                      });
+                    },
+                    child: AnimatedContainer(
+                      duration: const Duration(milliseconds: 250),
+                      decoration: BoxDecoration(
+                        color: isSelected
+                            ? AppColors.primaryColor
+                            : AppColors.cFFFFFF,
+                        borderRadius: BorderRadius.circular(16.r),
+                        border: Border.all(
+                          color: isSelected
+                              ? AppColors.primaryColor
+                              : AppColors.grey200Color,
+                        ),
+                      ),
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 16.w,
+                        vertical: 8.h,
+                      ),
+                      child: Text(
+                        taskFilters[index],
+                        style: TextFontStyle.headlinePoppins60013.copyWith(
+                          color: isSelected
+                              ? AppColors.cFFFFFF
+                              : AppColors.titleColor,
+                        ),
                       ),
                     ),
                   ),
-                ),
-              ],
+                );
+              }),
             ),
             UIHelper.verticalSpace(11.h),
             ListView.builder(
