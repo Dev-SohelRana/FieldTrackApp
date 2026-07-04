@@ -1,6 +1,9 @@
 import 'package:field_track_app/assets_helper/app_colors.dart';
 import 'package:field_track_app/assets_helper/app_icons.dart';
 import 'package:field_track_app/constants/text_font_style.dart';
+import 'package:field_track_app/features/locations/presentation/location_screen.dart';
+import 'package:field_track_app/features/profile/presentation/profile_screen.dart';
+import 'package:field_track_app/features/sync/presentation/sync_screen.dart';
 import 'package:field_track_app/features/task/presentation/task_screen.dart';
 import 'package:field_track_app/helpers/helper_methods.dart';
 import 'package:field_track_app/helpers/ui_helpers.dart';
@@ -22,9 +25,9 @@ class _NavigationScreenState extends State<NavigationScreen> {
 
   final List<Widget> _screens = [
     const TaskScreen(),
-    const TaskScreen(),
-    const TaskScreen(),
-    const TaskScreen(),
+    const LocationScreen(),
+    const SyncScreen(),
+    const ProfileScreen(),
   ];
 
   @override

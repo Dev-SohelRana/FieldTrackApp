@@ -19,6 +19,11 @@ class AppIcons {
   static const String syncUnselectedIcon = '$iconsRoute/syncUnselectedIcon.svg';
   static const String profileSelectedIcon =
       '$iconsRoute/profileSelectedIcon.svg';
+  static const String fieldUserBadge = '$iconsRoute/fieldUserBadge.svg';
+  static const String notificationIcon = '$iconsRoute/notificationIcon.svg';
+  static const String settingsIcon = '$iconsRoute/settingsIcon.svg';
+  static const String helpIcon = '$iconsRoute/helpIcon.svg';
+  static const String logoutIcon = '$iconsRoute/logoutcon.svg';
 
   static const String arrowBackIcon = '$iconsRoute/arrowBackIcon.svg';
 }

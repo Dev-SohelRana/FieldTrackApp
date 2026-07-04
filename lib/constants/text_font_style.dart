@@ -110,7 +110,7 @@ class TextFontStyle {
   );
 
   static final headlinePoppins50014 = GoogleFonts.poppins(
-    color: AppColors.onboardingButtonText,
+    color: AppColors.titleColor,
     fontSize: 14.sp,
     fontWeight: FontWeight.w500,
   );
@@ -137,6 +137,12 @@ class TextFontStyle {
     fontWeight: FontWeight.w600,
   );
 
+  static final headlinePoppins60016 = GoogleFonts.poppins(
+    color: AppColors.titleColor,
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w600,
+  );
+
   static final headlinePoppins60015 = GoogleFonts.poppins(
     color: AppColors.titleColor,
     fontSize: 15.sp,
@@ -152,6 +158,12 @@ class TextFontStyle {
   static final headlinePoppins70014 = GoogleFonts.poppins(
     color: AppColors.cFFFFFF,
     fontSize: 14.sp,
+    fontWeight: FontWeight.w700,
+  );
+
+  static final headlinePoppins70018 = GoogleFonts.poppins(
+    color: AppColors.titleColor,
+    fontSize: 18.sp,
     fontWeight: FontWeight.w700,
   );
   static final headlinePoppins60013 = GoogleFonts.poppins(

@@ -24,6 +24,7 @@ final class Endpoints {
   static String getTodos() => "/api/v1/todos";
 
   static String logOut() => "/api/v1/auth/logout";
+  static String userProfile() => "/api/v1/me";
 
   static String getNotifications() => "/api/v1/notifications";
   // static String getNotificationSparkComplete(int sparkId) =>
