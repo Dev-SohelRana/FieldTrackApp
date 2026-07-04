@@ -17,101 +17,170 @@ class _SyncScreenState extends State<SyncScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 48.h),
-        child: Column(
-          children: [
-            Text('Locations', style: TextFontStyle.headlinePoppins70021),
-            UIHelper.verticalSpace(14.h),
-            Container(
-              width: double.infinity, // Full width
-              decoration: BoxDecoration(
-                color: AppColors.cFFFFFF,
-                borderRadius: BorderRadius.circular(16.r),
-                border: Border.all(color: AppColors.textGrey100, width: 2.w),
-              ),
-              child: Padding(
-                padding: EdgeInsets.all(16.sp),
-                child: Row(
-                  children: [
-                    SvgPicture.asset(AppIcons.syncSelectedIcon),
-                    UIHelper.horizontalSpace(16.w),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 48.h),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
 
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Text(
-                          'taskDoneToday',
-                          style: TextFontStyle.headlinePoppins70018,
+            children: [
+              Text('Locations', style: TextFontStyle.headlinePoppins70021),
+              UIHelper.verticalSpace(14.h),
+              Container(
+                width: double.infinity, // Full width
+                decoration: BoxDecoration(
+                  color: AppColors.cFFFFFF,
+                  borderRadius: BorderRadius.circular(16.r),
+                  border: Border.all(color: AppColors.textGrey100, width: 2.w),
+                ),
+                child: Padding(
+                  padding: EdgeInsets.all(16.sp),
+                  child: Row(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          color: AppColors.primaryColor.withAlpha(30),
+                          borderRadius: BorderRadius.circular(7.r),
                         ),
-                        UIHelper.verticalSpace(2.h),
-                        Text(
-                          'Tasks done today',
-                          style: TextFontStyle.headlinePoppins40013,
+                        child: Padding(
+                          padding: EdgeInsets.all(8.sp),
+                          child: SvgPicture.asset(AppIcons.syncSelectedIcon),
                         ),
-                      ],
-                    ),
-                  ],
+                      ),
+                      UIHelper.horizontalSpace(16.w),
+
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text(
+                            'taskDoneToday',
+                            style: TextFontStyle.headlinePoppins70018,
+                          ),
+                          UIHelper.verticalSpace(2.h),
+                          Text(
+                            'Tasks done today',
+                            style: TextFontStyle.headlinePoppins40013,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
-            ),
-            UIHelper.verticalSpace(12.h),
-            Text(
-              'Waiting to upload',
-              style: TextFontStyle.headlinePoppins60015,
-            ),
-            UIHelper.verticalSpace(12.h),
-            Container(
-              width: double.infinity, // Full width
-              decoration: BoxDecoration(
-                color: AppColors.cFFFFFF,
-                borderRadius: BorderRadius.circular(16.r),
-                border: Border.all(color: AppColors.textGrey100, width: 2.w),
+              UIHelper.verticalSpace(12.h),
+              Text(
+                'Waiting to upload',
+                style: TextFontStyle.headlinePoppins60015,
               ),
-              child: Padding(
-                padding: EdgeInsets.all(16.sp),
-                child: Row(
-                  children: [
-                    SvgPicture.asset(AppIcons.pendingTaskIcon),
-                    UIHelper.horizontalSpace(16.w),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Text(
-                          'taskDoneToday',
-                          style: TextFontStyle.headlinePoppins70018,
-                        ),
-                        UIHelper.verticalSpace(2.h),
-                        Text(
-                          'Tasks done today',
-                          style: TextFontStyle.headlinePoppins40013,
-                        ),
-                      ],
-                    ),
-                    UIHelper.horizontalSpace(10.w),
-                    Container(
+              UIHelper.verticalSpace(12.h),
+              ListView.builder(
+                itemCount: 3,
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                padding: EdgeInsets.zero,
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: EdgeInsets.only(bottom: 12.h),
+                    child: Container(
+                      width: double.infinity, // Full width
                       decoration: BoxDecoration(
-                        color: AppColors.cE5B16F,
-                        borderRadius: BorderRadius.circular(7.r),
+                        color: AppColors.cFFFFFF,
+                        borderRadius: BorderRadius.circular(16.r),
+                        border: Border.all(
+                          color: AppColors.textGrey100,
+                          width: 2.w,
+                        ),
                       ),
                       child: Padding(
-                        padding: EdgeInsets.symmetric(
-                          horizontal: 9.w,
-                          vertical: 3.h,
-                        ),
-                        child: Text(
-                          'Pending',
-                          style: TextFontStyle.headlinePoppins70011,
+                        padding: EdgeInsets.all(24.sp),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              decoration: BoxDecoration(
+                                color: AppColors.primaryColor.withAlpha(30),
+                                borderRadius: BorderRadius.circular(7.r),
+                              ),
+                              child: Padding(
+                                padding: EdgeInsets.all(8.sp),
+                                child: SvgPicture.asset(
+                                  AppIcons.pendingTaskIcon,
+                                ),
+                              ),
+                            ),
+
+                            UIHelper.horizontalSpace(16.w),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Take inventory count',
+                                  style: TextFontStyle.headlinePoppins70018,
+                                ),
+                                UIHelper.verticalSpace(2.h),
+                                Text(
+                                  'Marked done · 10:15 AM',
+                                  style: TextFontStyle.headlinePoppins40013,
+                                ),
+                              ],
+                            ),
+                            UIHelper.horizontalSpace(10.w),
+                            Container(
+                              decoration: BoxDecoration(
+                                color: AppColors.cE5B16F,
+                                borderRadius: BorderRadius.circular(7.r),
+                              ),
+                              child: Padding(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 9.w,
+                                  vertical: 3.h,
+                                ),
+                                child: Text(
+                                  'Pending',
+                                  style: TextFontStyle.headlinePoppins70011,
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ),
-                  ],
+                  );
+                },
+              ),
+              UIHelper.verticalSpace(12.h),
+              Container(
+                decoration: BoxDecoration(
+                  color: AppColors.primaryColor,
+                  borderRadius: BorderRadius.circular(16.r),
+                  border: Border.all(color: AppColors.cFFFFFF, width: 2.w),
+                ),
+                child: Padding(
+                  padding: EdgeInsets.all(16.sp),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SvgPicture.asset(
+                        AppIcons.syncUnselectedIcon,
+                        color: AppColors.cFFFFFF,
+                      ),
+                      UIHelper.horizontalSpace(8.w),
+                      Text(
+                        'Sync now',
+                        style: TextFontStyle.headlinePoppins60016.copyWith(
+                          color: AppColors.cFFFFFF,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ],
+              UIHelper.verticalSpace(120.h),
+            ],
+          ),
         ),
       ),
     );
