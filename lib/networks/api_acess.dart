@@ -1,6 +1,8 @@
 import 'package:field_track_app/features/auth/data/rx_post_register/rx.dart';
 import 'package:field_track_app/features/auth/data/rx_post_sign_in/rx.dart';
 import 'package:field_track_app/features/auth/model/login_response_model.dart';
+import 'package:field_track_app/features/locations/data/rx_get_locations/rx.dart';
+import 'package:field_track_app/features/locations/model/get_location_response_model.dart';
 import 'package:field_track_app/features/profile/data/rx_post_logout/rx.dart';
 import 'package:field_track_app/features/profile/data/rx_profile_info/rx.dart';
 import 'package:field_track_app/features/profile/model/profile_info_response_model.dart';
@@ -27,6 +29,11 @@ GetTodosRX getTodosRXObj = GetTodosRX(
 ProfileInfoRX profileInfoRXObj = ProfileInfoRX(
   empty: ProfileInfoResponseModel(),
   dataFetcher: BehaviorSubject<ProfileInfoResponseModel>(),
+);
+
+GetLocationsRX getLocationsRXObj = GetLocationsRX(
+  empty: GetLocationsResponseModel(),
+  dataFetcher: BehaviorSubject<GetLocationsResponseModel>(),
 );
 
 LogOutRx logOutRXObj = LogOutRx(empty: {}, dataFetcher: BehaviorSubject<Map>());

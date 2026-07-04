@@ -25,6 +25,7 @@ final class Endpoints {
 
   static String logOut() => "/api/v1/auth/logout";
   static String userProfile() => "/api/v1/me";
+  static String getLocations() => "/api/v1/locations";
 
   static String getNotifications() => "/api/v1/notifications";
   // static String getNotificationSparkComplete(int sparkId) =>

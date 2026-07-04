@@ -24,6 +24,9 @@ class AppIcons {
   static const String settingsIcon = '$iconsRoute/settingsIcon.svg';
   static const String helpIcon = '$iconsRoute/helpIcon.svg';
   static const String logoutIcon = '$iconsRoute/logoutcon.svg';
+  static const String locationPinIcon = '$iconsRoute/locationPinIcon.svg';
+  static const String latlgnIcon = '$iconsRoute/latlgnIcon..svg';
+  static const String pendingTaskIcon = '$iconsRoute/pendingTaskIcon..svg';
 
   static const String arrowBackIcon = '$iconsRoute/arrowBackIcon.svg';
 }
