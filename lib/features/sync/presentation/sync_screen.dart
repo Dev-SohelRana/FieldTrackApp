@@ -24,7 +24,7 @@ class _SyncScreenState extends State<SyncScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
 
             children: [
-              Text('Locations', style: TextFontStyle.headlinePoppins70021),
+              Text('Sync', style: TextFontStyle.headlinePoppins70021),
               UIHelper.verticalSpace(14.h),
               Container(
                 width: double.infinity, // Full width
@@ -54,12 +54,12 @@ class _SyncScreenState extends State<SyncScreen> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Text(
-                            'taskDoneToday',
+                            '3 changes pending',
                             style: TextFontStyle.headlinePoppins70018,
                           ),
                           UIHelper.verticalSpace(2.h),
                           Text(
-                            'Tasks done today',
+                            'Last synced today, 9:45 AM',
                             style: TextFontStyle.headlinePoppins40013,
                           ),
                         ],
@@ -111,20 +111,22 @@ class _SyncScreenState extends State<SyncScreen> {
                             ),
 
                             UIHelper.horizontalSpace(16.w),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'Take inventory count',
-                                  style: TextFontStyle.headlinePoppins70018,
-                                ),
-                                UIHelper.verticalSpace(2.h),
-                                Text(
-                                  'Marked done · 10:15 AM',
-                                  style: TextFontStyle.headlinePoppins40013,
-                                ),
-                              ],
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Take inventory count',
+                                    style: TextFontStyle.headlinePoppins70018,
+                                  ),
+                                  UIHelper.verticalSpace(2.h),
+                                  Text(
+                                    'Marked done · 10:15 AM',
+                                    style: TextFontStyle.headlinePoppins40013,
+                                  ),
+                                ],
+                              ),
                             ),
                             UIHelper.horizontalSpace(10.w),
                             Container(

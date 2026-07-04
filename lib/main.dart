@@ -5,7 +5,6 @@ import 'package:field_track_app/constants/custome_theme.dart';
 import 'package:field_track_app/helpers/all_routes.dart';
 import 'package:field_track_app/helpers/di.dart';
 import 'package:field_track_app/helpers/helper_methods.dart';
-import 'package:field_track_app/helpers/language.dart';
 import 'package:field_track_app/helpers/navigation_service.dart';
 import 'package:field_track_app/helpers/register_provider.dart';
 import 'package:field_track_app/loading_screen.dart';
@@ -115,7 +114,7 @@ class UtillScreenMobile extends StatelessWidget {
               scaffoldBackgroundColor: Colors.white,
             ),
             debugShowCheckedModeBanner: false,
-            translations: LocalString(),
+            // translations: LocalString(),
             locale: Locale(language, countryCode),
             builder: (context, widget) {
               return MediaQuery(data: MediaQuery.of(context), child: widget!);
